@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* common styles */
 body{font-family: 'Poppins', sans-serif;
-margin: 0 ;
+margin: 0 120px ;
 padding: 0;
 background-color: #FFFFFF;
 color: #3A3A3A;}
@@ -33,6 +33,9 @@ h1{width: 582px;
     font-weight: bold;
     font-size: 52px;
     line-height: 70px;}
+    
+header .Influencer:hover img{transform: rotate(360deg);}
+header .Influencer img{transition: 5s ease-in-out;}
 .link_button{
     text-decoration: none;
     background: #E02C6D;
@@ -44,7 +47,8 @@ color: white;}
     font-size: 28px;
     line-height: 70px;}
 .center{text-align: center;
-justify-content: center;}
+}
+.popular-collection{margin-bottom: 50px;}
 .collection-list{display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-column-gap: 15px;
@@ -59,35 +63,55 @@ grid-row-gap: 40px;}
 }
 .fa-star{color: #FB8200;}
 .fa-star-half-alt{color: #FB8200;}
+.see-more{font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #E02C6D;
+    display: flex;
+ justify-content: flex-end;
+align-items: center;
+margin-right: 180px;
+margin-bottom: 50px;
+padding: 20px;}
+.camera{display: grid;
+    grid-template-columns: repeat(2, 1fr);
+margin-bottom: 70px;}
+
+.camera img{width: 600px;
+    height: 300px;
+    border-radius: 7px;}
+.join_now{text-decoration: none;
+        background: #E02C6D;
+    padding: 10px 40px;
+  color: white;}
+ 
 footer{height: 250px;
-    
+    margin: 0 -120px;
     background-color: #0A0826;
 color: #FFFFFF;
  padding-top: 100px;}
+ .fab{padding: 0 10px;}
+
  /* media quary  */
  @media only screen and (max-width: 688px) {
-    *{margin: 0;
+    body{margin: 0;
     padding: 0;}
     .container{width: 100%;}
-  .nav{height: 100px;}
-  .half-width{width: 70%;}
-    .Influencer, .collection-list{
+  .Influencer, .collection-list{
          margin: 0 5px;
          grid-template-columns: 1fr;}
-        
-         
- 
          .Influencer, .collection-list {flex-direction: column;}
+        
      }
-
+     
      /* tablets device */
      @media only screen and (min-width: 688px) and (max-width: 992px) {
         .container{width: 100%;
         text-align: center;}
+      
         .Influencer{margin: 0 5px;
             grid-template-columns: 1fr;}
      
         .collection-list{ margin: 0 5px;
-             grid-template-columns: repeat(2, 1fr);
-            background-color: blue;}
+             grid-template-columns: repeat(2, 1fr)}
             .Influencer, .collection-list{flex-direction: column;}
