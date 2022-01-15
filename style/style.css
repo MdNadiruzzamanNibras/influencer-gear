@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* common styles */
 body{font-family: 'Poppins', sans-serif;
-margin: 0 120px;
+margin: 0 ;
 padding: 0;
 background-color: #FFFFFF;
 color: #3A3A3A;}
@@ -39,7 +39,55 @@ h1{width: 582px;
 padding: 10px 40px;
 border-radius: 41px;
 color: white;}
-.container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/* Popular collection  */
+.section-title{font-weight: 600;
+    font-size: 28px;
+    line-height: 70px;}
+.center{text-align: center;
+justify-content: center;}
+.collection-list{display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 40px;}
+.collection{
+    width: 300px;
+    height: 475px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 40px 0px #00000026;
+    padding: 20px;
+    border-radius: 5px;
 }
+.fa-star{color: #FB8200;}
+.fa-star-half-alt{color: #FB8200;}
+footer{height: 250px;
+    
+    background-color: #0A0826;
+color: #FFFFFF;
+ padding-top: 100px;}
+ /* media quary  */
+ @media only screen and (max-width: 688px) {
+    *{margin: 0;
+    padding: 0;}
+    .container{width: 100%;}
+  .nav{height: 100px;}
+  .half-width{width: 70%;}
+    .Influencer, .collection-list{
+         margin: 0 5px;
+         grid-template-columns: 1fr;}
+        
+         
+ 
+         .Influencer, .collection-list {flex-direction: column;}
+     }
+
+     /* tablets device */
+     @media only screen and (min-width: 688px) and (max-width: 992px) {
+        .container{width: 100%;
+        text-align: center;}
+        .Influencer{margin: 0 5px;
+            grid-template-columns: 1fr;}
+     
+        .collection-list{ margin: 0 5px;
+             grid-template-columns: repeat(2, 1fr);
+            background-color: blue;}
+            .Influencer, .collection-list{flex-direction: column;}
